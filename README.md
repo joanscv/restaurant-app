@@ -1,3 +1,10 @@
-Folder structure for a project following the MVC pattern. I took this structure from an online course I'm taking on Udemy named "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL" taught by [CodigoConJuan](https://codigoconjuan.com/)
+# Application for a restaurant
 
-To use it you have to have ***node.js*** and ***composer*** installed on your machine. If that's the case once you've cloned this repository, you can install the dependencies listed in the files package.json and composer.json by running the commands *npm install* and *composer install*, respectively. These dependencies should change from project to project, so feel free to remove the ones you consider unecessary and add the ones you think you need for your own project. 
+## Software
+
+- PHP
+- HTML
+- CSS
+- JavaScript
+- SCSS
+- SQL
