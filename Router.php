@@ -48,6 +48,14 @@ class Router
 
         $contenido = ob_get_clean(); // Limpia el Buffer
 
-        include_once __DIR__ . '/views/layout.php';
+        // Utilizar layout de acuerdo a la URL
+        $url_actual = $_SERVER['PATH_INFO'] ?? '/';
+
+        if(str_contains($url_actual, '/dashboard')){
+            include_once __DIR__ . '/views/dashboard-layout.php';
+        } else {
+            include_once __DIR__ . '/views/layout.php';   
+        }
+
     }
 }

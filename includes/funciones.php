@@ -10,3 +10,12 @@ function s($html) : string {
     $s = htmlspecialchars($html);
     return $s;
 }
+function is_auth():void{
+    session_start();
+    if(empty($_SESSION) || !$_SESSION['login']){
+        header('Location: /');
+    }
+}
+function is_selected($path):bool{
+    return str_contains($_SERVER['PATH_INFO'], $path) ? true : false;
+}

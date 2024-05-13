@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.login {
+    @include m.contenedor-sm;
+    //margin-top: 5rem;
+
+    &__heading {
+        &--main {
+            @include m.textoDegradado(v.$naranja);
+            margin-bottom: 2rem;
+        }
+        &--secondary {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-style: italic;
+    }
+
+    &__submit {
+        @include m.boton(v.$naranja, v.$blanco);
+        @include m.tablet {
+            width: auto;
+        }
+    }
+}

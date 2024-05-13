@@ -22,6 +22,28 @@
     }
 }
 
+/* Contenedores */
+
+@mixin contenedor {
+    //max-width: 120rem;
+    //width: 95%;
+    width: min(95%, 140rem);
+    margin: 0 auto;
+}
+
+@mixin contenedor-md {
+    width: min(95%, 80rem);
+    margin: 0 auto;
+}
+
+@mixin contenedor-sm {
+    width: min(95%, 60rem);
+    margin: 0 auto;
+}
+
+/* Botones */
+
+
 @mixin boton($bgColor, $colorTexto) {
     background-color: $bgColor;
     padding: 1.5rem 4rem;
@@ -45,4 +67,19 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin textoDegradado($color) {
+    background: linear-gradient(to right, $color 0%, lighten($color, 20%) 100%);
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-size: 7rem;
+    @include tablet {
+      font-size: 10rem;
+    }
+}
+
+@mixin shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

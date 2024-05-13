@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    &__enlace {
+        margin-bottom: 2rem;
+        color: v.$negro;
+    }
+}

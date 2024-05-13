@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario {
+    //@include m.shadow;
+    padding: 3rem;
+
+    &__campo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        flex: 0 0 10rem;
+    }
+
+    &__input {
+        padding: 1rem;
+        flex: 1;
+        border: none;
+        background-color: lighten(v.$gris, 40%);
+    }
+
+}

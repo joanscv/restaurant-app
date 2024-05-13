@@ -4,18 +4,15 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'confirmado', 'token', 'admin'];
+    protected static $columnasDB = ['id', 'nombre', 'apellido', 'username', 'password', 'admin'];
 
     public $id;
     public $nombre;
     public $apellido;
-    public $email;
+    public $username;
     public $password;
     public $password2;
-    public $confirmado;
-    public $token;
     public $admin;
-
     public $password_actual;
     public $password_nuevo;
 
@@ -25,22 +22,24 @@ class Usuario extends ActiveRecord {
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
         $this->apellido = $args['apellido'] ?? '';
-        $this->email = $args['email'] ?? '';
+        $this->username = $args['username'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? '';
-        $this->confirmado = $args['confirmado'] ?? 0;
-        $this->token = $args['token'] ?? '';
-        $this->admin = $args['admin'] ?? '';
+        $this->admin = $args['admin'] ?? 0;
     }
 
     // Validar el Login de Usuarios
     public function validarLogin() {
-        if(!$this->email) {
+        /*if(!$this->email) {
             self::$alertas['error'][] = 'El Email del Usuario es Obligatorio';
         }
         if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             self::$alertas['error'][] = 'Email no válido';
+        }*/
+        if(!$this->username) {
+            self::$alertas['error'][] = 'El nombre de Usuario es Obligatorio';
         }
+
         if(!$this->password) {
             self::$alertas['error'][] = 'El Password no puede ir vacio';
         }
@@ -56,9 +55,21 @@ class Usuario extends ActiveRecord {
         if(!$this->apellido) {
             self::$alertas['error'][] = 'El Apellido es Obligatorio';
         }
-        if(!$this->email) {
-            self::$alertas['error'][] = 'El Email es Obligatorio';
+
+        if(!$this->username) {
+            self::$alertas['error'][] = 'El Nombre de Usuario es Obligatorio';
         }
+
+        if($this->username[0] !== '@') {
+            self::$alertas['error'][] = 'El Nombre de Usuario debe empezar con @';
+        }
+
+        if(strlen($this->username) < 7) {
+            self::$alertas['error'][] = 'El Nombre de Usuario debe contener mínimo 6 caracteres después del @';
+        }
+        /*if(!$this->email) {
+            self::$alertas['error'][] = 'El Email es Obligatorio';
+        }*/
         if(!$this->password) {
             self::$alertas['error'][] = 'El Password no puede ir vacio';
         }
@@ -72,7 +83,7 @@ class Usuario extends ActiveRecord {
     }
 
     // Valida un email
-    public function validarEmail() {
+    /*public function validarEmail() {
         if(!$this->email) {
             self::$alertas['error'][] = 'El Email es Obligatorio';
         }
@@ -80,7 +91,7 @@ class Usuario extends ActiveRecord {
             self::$alertas['error'][] = 'Email no válido';
         }
         return self::$alertas;
-    }
+    }*/
 
     // Valida el Password 
     public function validarPassword() {
@@ -117,7 +128,7 @@ class Usuario extends ActiveRecord {
     }
 
     // Generar un Token
-    public function crearToken() : void {
+    /*public function crearToken() : void {
         $this->token = uniqid();
-    }
+    }*/
 }

@@ -13,9 +13,13 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="" defer></script>
 </head>
 <body>
-    <?php 
-        echo $contenido;
-    ?>
+    <?php require_once __DIR__ . '/templates/header.php'; ?>
+    <section class="dashboard">
+        <?php require_once __DIR__ . '/templates/sidebar.php'; ?>
+        <main class="dashboard__main">
+            <?php echo $contenido; ?>
+        </main>
+    </section>
     <script src="/build/js/bundle.min.js" defer></script>
 </body>
 </html>

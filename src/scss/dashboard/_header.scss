@@ -1,0 +1,24 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header {
+
+    background-color: v.$gris-oscuro;
+    padding: 2rem;
+   
+
+    &-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        color: v.$blanco;
+        margin: 0;
+    }
+
+    &__submit--logout{
+        @include m.boton(v.$naranja, v.$blanco)
+    }
+}
