@@ -1,6 +1,8 @@
 <?php 
 
 namespace Controllers;
+
+use Model\Mesas;
 use MVC\Router;
 
 class RestauranteController {
@@ -11,11 +13,14 @@ class RestauranteController {
         $nombre = $_SESSION['nombre'];
         $apellido = $_SESSION['apellido'];
 
+        $mesas = Mesas::all();
+
         $router->render('dashboard/restaurante/index', [
             'titulo' => 'Restaurante',
             'admin' => $admin,
             'nombre' => $nombre,
-            'apellido' => $apellido
+            'apellido' => $apellido,
+            'mesas' => $mesas
         ]);
 
     }

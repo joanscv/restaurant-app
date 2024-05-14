@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header-grid">
-        <a href="/">
+        <a href="/dashboard/inicio">
             <h2 class="header__logo">
                 Las Delicias de Mamá
             </h2>

@@ -12,7 +12,7 @@
     <i class="fa-solid fa-beer-mug-empty"></i>
         Bar
     </a>
-    <a href="/dashboard/hotel" class="dashboard__enlace <?php echo is_selected('/dashboard/hotel') ? 'dashboard__enlace--actual' : '' ?>">
+    <a href="/dashboard/hospedaje" class="dashboard__enlace <?php echo is_selected('/dashboard/hotel') ? 'dashboard__enlace--actual' : '' ?>">
         <i class="fa-solid fa-bed"></i>
         Hospedaje
     </a>

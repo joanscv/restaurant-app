@@ -507,6 +507,9 @@ h3 {
   color: #FFFFFF;
   margin: 0;
 }
+.header__logo:hover {
+  color: #F59E0B;
+}
 .header__submit--logout {
   background-color: #F59E0B;
   padding: 1.5rem 4rem;
@@ -554,7 +557,42 @@ h3 {
   overflow-y: scroll;
   width: 100%;
 }
-.dashboard__titulo {
+.dashboard__titulo, .dashboard__subtitulo {
   text-align: center;
+}
+@media (min-width: 768px) {
+  .dashboard__contenedor-perfil {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.dashboard__restaurante-mesas {
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+.dashboard__mesa {
+  border: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 3rem 0;
+  font-size: 3rem;
+}
+.dashboard__mesa:hover {
+  cursor: pointer;
+}
+.dashboard__mesa-libre {
+  background-color: #00ab00;
+}
+.dashboard__mesa-libre:hover {
+  background-color: rgb(0, 120, 0);
+}
+.dashboard__mesa-ocupada {
+  background-color: #F59E0B;
+}
+.dashboard__mesa-ocupada:hover {
+  background-color: #c57f08;
 }
 /*# sourceMappingURL=app.css.map */

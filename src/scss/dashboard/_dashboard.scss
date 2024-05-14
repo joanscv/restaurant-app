@@ -34,7 +34,20 @@
         overflow-y: scroll;
         width: 100%;  
     }
-    &__titulo {
+    &__titulo,
+    &__subtitulo {
         text-align: center;
+    }
+    &__contenedor-perfil{
+        @include m.tablet {
+            @include m.grid(2, 1rem);
+        }
+    }
+    &__restaurante-mesas {
+        padding: 0 1rem;
+        @include m.grid(4, 2rem);
+    }
+    &__mesa {
+        @include m.mesa;
     }
 }

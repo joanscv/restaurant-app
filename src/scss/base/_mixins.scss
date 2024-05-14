@@ -83,3 +83,27 @@
 @mixin shadow {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+@mixin mesa {
+    border: none;
+    color: v.$blanco;
+    font-weight: v.$bold;
+    padding: 3rem 0;
+    font-size: 3rem;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-libre{
+        background-color: lighten(v.$verde, 10%);
+        &:hover {
+            background-color: v.$verde;
+        }
+    }
+    &-ocupada{
+        background-color: v.$naranja;
+        &:hover {
+            background-color: darken($color: v.$naranja, $amount: 10%);
+        }
+    }
+}

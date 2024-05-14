@@ -19,3 +19,6 @@ function is_auth():void{
 function is_selected($path):bool{
     return str_contains($_SERVER['PATH_INFO'], $path) ? true : false;
 }
+function is_free($availability):string{
+    return $availability ? 'libre': 'ocupada';
+}

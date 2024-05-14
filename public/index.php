@@ -4,7 +4,10 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AuthController;
+use Controllers\BarController;
+use Controllers\HospedajeController;
 use Controllers\InicioController;
+use Controllers\ParkingController;
 use Controllers\RestauranteController;
 
 $router = new Router();
@@ -32,12 +35,19 @@ $router->get('/mensaje', [AuthController::class, 'mensaje']);
 $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 
 
-
 // Inicio
 $router->get('/dashboard/inicio', [InicioController::class, 'index']);
 
 // Restaurante
 $router->get('/dashboard/restaurante', [RestauranteController::class, 'index']);
 
+// Bar
+$router->get('/dashboard/bar', [BarController::class, 'index']);
+
+// Hospedaje
+$router->get('/dashboard/hospedaje', [HospedajeController::class, 'index']);
+
+// Parking
+$router->get('/dashboard/parking', [ParkingController::class, 'index']);
 
 $router->comprobarRutas();

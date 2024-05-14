@@ -16,6 +16,9 @@
     &__logo {
         color: v.$blanco;
         margin: 0;
+        &:hover{
+            color: v.$naranja;
+        }
     }
 
     &__submit--logout{
