@@ -568,7 +568,7 @@ h3 {
   }
 }
 .dashboard__restaurante-mesas {
-  padding: 0 1rem;
+  padding: 0 2rem;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
@@ -576,9 +576,12 @@ h3 {
 .dashboard__mesa {
   border: none;
   color: #FFFFFF;
+  text-align: center;
   font-weight: 700;
   padding: 3rem 0;
   font-size: 3rem;
+  border: none;
+  border-radius: 0.5rem;
 }
 .dashboard__mesa:hover {
   cursor: pointer;
@@ -590,9 +593,32 @@ h3 {
   background-color: rgb(0, 120, 0);
 }
 .dashboard__mesa-ocupada {
-  background-color: #F59E0B;
+  background-color: #64748B;
 }
 .dashboard__mesa-ocupada:hover {
-  background-color: #c57f08;
+  background-color: #4f5b6d;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin: 0 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__boton--regresar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748B;
+}
+.menu__boton--regresar:hover {
+  color: #1a1b15;
 }
 /*# sourceMappingURL=app.css.map */

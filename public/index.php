@@ -7,6 +7,7 @@ use Controllers\AuthController;
 use Controllers\BarController;
 use Controllers\HospedajeController;
 use Controllers\InicioController;
+use Controllers\MenuController;
 use Controllers\ParkingController;
 use Controllers\RestauranteController;
 
@@ -40,6 +41,10 @@ $router->get('/dashboard/inicio', [InicioController::class, 'index']);
 
 // Restaurante
 $router->get('/dashboard/restaurante', [RestauranteController::class, 'index']);
+
+// Menu
+$router->get('/dashboard/restaurante/menu', [MenuController::class, 'index']);
+
 
 // Bar
 $router->get('/dashboard/bar', [BarController::class, 'index']);

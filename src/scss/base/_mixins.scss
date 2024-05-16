@@ -87,9 +87,12 @@
 @mixin mesa {
     border: none;
     color: v.$blanco;
+    text-align: center;
     font-weight: v.$bold;
     padding: 3rem 0;
     font-size: 3rem;
+    border: none;
+    border-radius: .5rem;
     &:hover {
         cursor: pointer;
     }
@@ -101,9 +104,9 @@
         }
     }
     &-ocupada{
-        background-color: v.$naranja;
+        background-color: v.$gris;
         &:hover {
-            background-color: darken($color: v.$naranja, $amount: 10%);
+            background-color: darken($color: v.$gris, $amount: 10%);
         }
     }
 }
